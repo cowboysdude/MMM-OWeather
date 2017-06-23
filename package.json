@@ -1,0 +1,15 @@
+{
+  "name": "mmm-npmweather",
+  "version": "0.0.1",
+  "main": "MMM-NPMWeather.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "cowboysdude",
+  "license": "MIT",
+  "dependencies": {
+    "weather-js": "^2.0.0"
+  },
+  "devDependencies": {},
+  "description": ""
+}
