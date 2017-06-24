@@ -1,4 +1,5 @@
 
+ 
    /* Magic Mirror
     * Module: MMM-NPMWeather
     *
@@ -77,12 +78,13 @@
            var today = moment().format('MM-DD-YYYY');
           
            var weatherTable = document.createElement("table");
+           
            var locationRow = document.createElement("tr");
           
             var locationImg = document.createElement("th");
 			locationImg.setAttribute("colspan", 1);
 			locationImg.classList.add("xsmall","bright");
-			locationImg.innerHTML = "  ";
+			locationImg.innerHTML = "Current Weather";
 			locationRow.appendChild(locationImg);
 			weatherTable.appendChild(locationRow);
 
@@ -201,7 +203,7 @@
 			
 			
 			var skyText = document.createElement("td");
-var Wimg = "<img src=http://blob.weather.microsoft.com/static/weather4/en-us/law/"+forecast.skycodeday+".gif width=35px height=35px>";
+var Wimg = "<img src=http://blob.weather.microsoft.com/static/weather4/en-us/law/"+forecast.skycodeday+".gif width=30px height=30px>";
 			skyText.classList.add("xsmall", "bright");
 			skyText.innerHTML = Wimg;
 			row.appendChild(skyText);
