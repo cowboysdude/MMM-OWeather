@@ -1,2 +1,2 @@
-# MMM-NPMWeather
+# MMM-OWeather
 Weather Module MM
