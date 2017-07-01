@@ -1,0 +1,15 @@
+{
+  "name": "mmm-oweather",
+  "version": "0.0.1",
+  "main": "MMM-OWeather.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "cowboysdude",
+  "license": "MIT",
+  "dependencies": {
+    "request": "^2.81.0"
+  },
+  "devDependencies": {},
+  "description": ""
+}
