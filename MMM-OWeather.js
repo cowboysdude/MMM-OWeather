@@ -1,4 +1,5 @@
 
+  
    /* Magic Mirror
     * Module: MMM-NPMWeather
     *
@@ -10,7 +11,7 @@
    
       // Module config defaults.
       defaults: {
-          updateInterval: 60*60*1000, // every hour
+          updateInterval: 15*60*1000, // every 15 min
           animationSpeed: 0,
           initialLoadDelay: 875, // 0 seconds delay
           retryDelay: 4500,
@@ -187,6 +188,14 @@
            
            var locationRow = document.createElement("tr");
           
+            var clock = document.createElement("th");
+			clock.setAttribute("colspan", 1);
+			clock.classList.add("xsmall","bright");
+			clock.innerHTML = "";
+			locationRow.appendChild(clock);
+			weatherTable.appendChild(locationRow);
+            
+            
             var locationImg = document.createElement("th");
 			locationImg.setAttribute("colspan", 1);
 			locationImg.classList.add("xsmall","bright");
@@ -206,14 +215,14 @@
 			currentHSymbol.setAttribute("colspan", 1);
 			currentHSymbol.classList.add("wi", "wi-humidity");
 			currentH.appendChild(currentHSymbol);
-			locationRow.appendChild(currentHSymbol);
+			locationRow.appendChild(currentH);
 
 			var currentWind = document.createElement("th");
-			currentWind.setAttribute("colspan", 2);
-			currentWind.classList.add("xsmall","bright");
-			currentWind.innerHTML = "Wind/Speed";
+			var currentWindSymbol = document.createElement("th");
+			currentWindSymbol.setAttribute("colspan", 1);
+			currentWindSymbol.classList.add("wi", "wi-strong-wind");
+			currentWind.appendChild(currentWindSymbol);
 			locationRow.appendChild(currentWind);
-			weatherTable.appendChild(locationRow);
 			
 			var nextFive = document.createElement("th");
 			nextFive.setAttribute("colspan", 1);
@@ -259,6 +268,14 @@
 			
 			var row = document.createElement("tr");
 			
+			var cClock = document.createElement("td");
+            cClock.classList.add("bright","clock");
+            var clock = this.updateTime();
+            cClock.innerHTML = clock;
+            row.appendChild(cClock);
+            weatherTable.appendChild(row);
+			
+			
 		    var WLogo = document.createElement("td");
 		    var wimg = document.createElement("img");
             wimg.classList.add("weatherimg");
@@ -271,7 +288,7 @@
 			if (weather.current_weather[0].temp < 40){
 			dateColumn.classList.add("bright","lowtemp");
 	        dateColumn.innerHTML = weather.current_weather[0].temp + "&#730;";	
-			} else if (weather.current_weather[0].temp > 80){
+			} else if (weather.current_weather[0].temp > 85){
 			dateColumn.classList.add("bright", "hitemp");
 	        dateColumn.innerHTML = weather.current_weather[0].temp + "&#730;";	
 			} else {
@@ -296,7 +313,7 @@
 
 			var lowColumn = document.createElement("td");
 			lowColumn.classList.add("xsmall", "bright");
-			lowColumn.setAttribute("colspan", 2);
+			lowColumn.setAttribute("colspan", 1);
 			if (weather.current_weather[0].wind[0].dir == "Not Available"){
 			lowColumn.innerHTML = weather.current_weather[0].wind[0].dir;	
 			} else {
@@ -360,6 +377,16 @@
          this.loaded = true;
      },
     
+     updateTime: function () {
+    var date = new Date();
+    var options = {
+        hour: 'numeric',
+        minute: 'numeric',
+        hour12: true
+    };
+    var timeString = date.toLocaleString('en-US', options);
+    return timeString;
+    },
      
      stripZeros: function (dateStr){
        return dateStr.split('-').reduce(function(date, datePart){
@@ -397,4 +424,4 @@
          }
      },
 
- });
+ }); });
