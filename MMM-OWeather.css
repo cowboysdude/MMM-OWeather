@@ -7,8 +7,12 @@
 	width:70%;
 	display:inline-block;
 }
+.MMM-OWeather .clock {
+	color: #627c9d;
+	font-weight: bold;
+	font-size: 22px;
+}
 .humid {
-	
     border: 1px solid #ff0000;
     -webkit-border-radius: 3px;
     height: 18px;
