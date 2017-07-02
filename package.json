@@ -1,6 +1,6 @@
 {
   "name": "mmm-oweather",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "MMM-OWeather.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,5 +11,13 @@
     "request": "^2.81.0"
   },
   "devDependencies": {},
-  "description": ""
+  "description": "Weather Module for MM2",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cowboysdude/MMM-OWeather.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cowboysdude/MMM-OWeather/issues"
+  },
+  "homepage": "https://github.com/cowboysdude/MMM-OWeather#readme"
 }
