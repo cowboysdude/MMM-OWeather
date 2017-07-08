@@ -1,16 +1,49 @@
 
- .weatherimg {
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+@font-face {
+font-family: CinzelDecorative-Regular;
+src: url('../CinzelDecorative-Regular.ttf')
+}
+.weatherimg {
    width: 45%;
    height: 45%;
 }
 .humordiv {
-	width:70%;
+	width:90%;
 	display:inline-block;
 }
-.MMM-OWeather .clock {
-	color: #627c9d;
+.MMM-OWeather .date{
+	color:#a4dde8;
+}
+.MMM-OWeather .amclock {
+	font-family: Oswald;
+	align-items: center;
+	color: #6069e3;
+	font-size:18px;
+	border-radius: 15px;
+    border: 1px solid #73AD21;
+    padding: 10px; 
+    height: 15px;
+}
+.MMM-OWeather .eclock {
+	font-family: Oswald;
+	align-items: center;
+	color: #c5ebfa;
+	font-size:18px;
+	border-radius: 15px;
+    border: 1px solid #73AD21;
+    padding: 10px; 
+    height: 15px;
+}
+.MMM-OWeather .pmclock {
+	font-family: Oswald;
+	color: #c7c0b8;
 	font-weight: bold;
-	font-size: 22px;
+	font-size: 18px;
+	border-radius: 15px;
+    border: 1px solid #73AD21;
+    padding: 10px; 
+    height: 15px;
 }
 .humid {
     border: 1px solid #ff0000;
