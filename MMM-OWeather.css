@@ -1,15 +1,11 @@
-
 @import url('https://fonts.googleapis.com/css?family=Oswald');
-@font-face {
-font-family: CinzelDecorative-Regular;
-src: url('../CinzelDecorative-Regular.ttf')
-}
+
 .weatherimg {
    width: 45%;
    height: 45%;
 }
 .humordiv {
-	width:90%;
+	width:100%;
 	display:inline-block;
 }
 .MMM-OWeather .date{
@@ -18,8 +14,7 @@ src: url('../CinzelDecorative-Regular.ttf')
 .MMM-OWeather .amclock {
 	font-family: Oswald;
 	align-items: center;
-	color: #6069e3;
-	font-size:18px;
+	color: #fce2b4;
 	border-radius: 15px;
     border: 1px solid #73AD21;
     padding: 10px; 
@@ -29,7 +24,6 @@ src: url('../CinzelDecorative-Regular.ttf')
 	font-family: Oswald;
 	align-items: center;
 	color: #c5ebfa;
-	font-size:18px;
 	border-radius: 15px;
     border: 1px solid #73AD21;
     padding: 10px; 
@@ -39,7 +33,6 @@ src: url('../CinzelDecorative-Regular.ttf')
 	font-family: Oswald;
 	color: #c7c0b8;
 	font-weight: bold;
-	font-size: 18px;
 	border-radius: 15px;
     border: 1px solid #73AD21;
     padding: 10px; 
@@ -52,7 +45,8 @@ src: url('../CinzelDecorative-Regular.ttf')
     width: 18px;
     -webkit-animation: pulsate 1s ease-out;
     -webkit-animation-iteration-count: infinite; 
-    opacity: 0.0
+    opacity: 0.0;
+    font-weight: bold;
 }
 @-webkit-keyframes pulsate {
     0% {-webkit-transform: scale(0.1, 0.1); opacity: 0.0;}
@@ -67,7 +61,8 @@ src: url('../CinzelDecorative-Regular.ttf')
     width: 18px;
     -webkit-animation: pulsate 1s ease-out;
     -webkit-animation-iteration-count: infinite; 
-    opacity: 0.0
+    opacity: 0.0;
+    font-weight: bold;
 }
 @-webkit-keyframes pulsate {
     0% {-webkit-transform: scale(0.1, 0.1); opacity: 0.0;}
@@ -75,7 +70,7 @@ src: url('../CinzelDecorative-Regular.ttf')
     100% {-webkit-transform: scale(1.2, 1.2); opacity: 0.0;}
 }
 .lowtemp {
-    border: 1px solid #0f1bff;
+    border: .5px solid #0f1bff;
     -webkit-border-radius: 2px;
     height: 18px;
     width: 18px;
@@ -88,3 +83,4 @@ src: url('../CinzelDecorative-Regular.ttf')
     50% {opacity: 1.0;}
     100% {-webkit-transform: scale(1.2, 1.2); opacity: 0.0;}
 }
+
